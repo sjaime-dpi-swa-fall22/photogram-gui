@@ -1,0 +1,29 @@
+<ul>
+  <li><a href="/users">Users</a></li>
+  <li><a href="/photos">Photos</a></li>
+</ul>
+
+<h1> <%= @username %> </h1>
+
+<h2>Own photos (<%= @image_list.count %>)</h2>
+
+<table border="1">
+  <tr>
+    <th>Image</th>
+    <th>Owner</th>
+    <th>Caption</th>
+    <th>Posted</th>
+    <th></th>
+  </tr>
+
+  <% @image_list.each do |photo|%>
+    <tr>
+      <td><img src=<%= photo.image %> ></td>
+      <td><%= @username %></td>
+      <td><%= photo.caption %></td>
+      <td><%= photo.created_at %></td>
+      <td> <a href="/photos/<%= photo.id %>">Show details</td>
+    </tr>
+  <% end %>
+
+</table>
