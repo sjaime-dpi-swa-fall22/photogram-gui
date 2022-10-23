@@ -1,4 +1,22 @@
+<ul>
+  <li><a href="/users">Users</a></li>
+  <li><a href="/photos">Photos</a></li>
+</ul>
+
 <h1>List of photos</h1>
+<form action="/insert_photo">
+  <label for="image_url">Image</label>
+  <input id="image_url" type="text" name="image_url" placeholder="Enter a url for the image">
+
+  <label for="caption">Caption</label>
+  <textarea id="caption" type="text" name="caption" placeholder="Enter a caption for the image"></textarea>
+
+  <label for="owner_id">Owner ID</label>
+  <input id="owner_id" type="text" name="owner_id" placeholder="Enter an id of the user">
+  <button>Add photo</button>
+</form>
+
+<hr>
 
 <table border="1">
   <tr>
